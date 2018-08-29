@@ -1,0 +1,50 @@
+
+object Hello{
+    def message = "Hello!"
+}
+
+
+Hello.message
+
+object Hello {
+    val oneHourInMinutes : Int = 60
+
+
+def createTimeFrominutes(minutes: Int) =
+ new Time(
+     minutes / oneHourInMinutes,
+     minutes % oneHourInMinutes)
+    
+    
+}
+
+object Hello {
+    def main(args : Array[String]) : Unit =
+        println("Hello!")
+}
+
+class Hello {
+    private val message : String = "Hello!"
+}
+
+
+
+class Welcome() {
+    val message : String = "Hello!"
+}
+
+// Can't touch that 
+val hel = new Hello()
+println(hel.message)
+
+// You can touch that 
+val wel=new Welcome()
+println(wel.message)
+
+object Hello {
+    private val defaultMessage = "Hello!"
+}
+// class Hello sees a private field of an object Hello
+class Hello(message : String = Hello.defaultMessage){
+    println(message)
+}
